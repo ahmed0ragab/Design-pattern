@@ -1,7 +1,13 @@
 <?php
 
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+
+Route::get('/pay/create',[PaymentController::class , 'createPaymentForm']);
+// Route::get('/pay',[PaymentController::class , 'pay']);
